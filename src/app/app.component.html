@@ -1,3 +1,7 @@
-<mat-card>
-  <mat-card-title>Hello World</mat-card-title>
-</mat-card>
+<div *ngFor="let team of teams">
+  <mat-card>
+    <mat-card-title>{{ team.name }}</mat-card-title>
+    <mat-card-subtitle>{{ team.countryCode }}</mat-card-subtitle>
+    <img src="{{team.countryFlag}}">
+  </mat-card>
+</div>
