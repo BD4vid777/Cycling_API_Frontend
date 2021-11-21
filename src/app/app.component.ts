@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient, HttpHeaders } from "@angular/common/http";
+import { environment } from "../environments/environment";
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,7 @@ export class AppComponent {
 
   private headersDict = {
     'x-rapidapi-host': 'pro-cycling-stats.p.rapidapi.com',
-    'x-rapidapi-key': 'ff2d4f0c13msh355a37b334e3357p1b3479jsnc0bc78225888'
+    'x-rapidapi-key': environment.RAPID_API_KEY
   };
   private requestOptions = {
     headers: new HttpHeaders(this.headersDict)
