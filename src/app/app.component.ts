@@ -12,6 +12,8 @@ export class AppComponent {
     this.loadData()
   }
 
+  title: string = 'Hello'
+
   teams: any[] = [];
 
   private headersDict = {

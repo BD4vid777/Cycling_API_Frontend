@@ -1,7 +1,16 @@
-<div *ngFor="let team of teams">
-  <mat-card>
-    <mat-card-title>{{ team.name }}</mat-card-title>
-    <mat-card-subtitle>{{ team.countryCode }}</mat-card-subtitle>
-    <img src="{{team.countryFlag}}">
-  </mat-card>
+<div class="main-container">
+  <mat-toolbar color="primary">
+    API DASHBOARD
+  </mat-toolbar>
+  <mat-sidenav-container>
+    <mat-sidenav mode="side" opened>
+      <app-api-sidenav></app-api-sidenav>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
 </div>
+
+
+
