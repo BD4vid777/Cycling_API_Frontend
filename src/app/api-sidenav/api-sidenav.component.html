@@ -1,1 +1,30 @@
-<p>api-sidenav works!</p>
+<header class="sidenav-header">
+  <div class="logo-block">P</div>
+  <div class="logo-block">C</div>
+  <div class="logo-block logo-block-grey">S</div>
+  <div class="logo-block logo-block-grey">A</div>
+  <div class="logo-block">P</div>
+  <div class="logo-block">I</div>
+</header>
+<mat-divider></mat-divider>
+
+<div class="buttons">
+  <div class="buttons-main">
+    <button mat-raised-button color="primary" class="menu-button" routerLink="/">
+      <mat-icon>dashboard</mat-icon>
+      <span>Overview</span>
+    </button>
+    <button mat-raised-button color="primary" class="menu-button" routerLink="/guide">
+      <mat-icon>info</mat-icon>
+      <span>Guide</span>
+    </button>
+    <button mat-raised-button color="primary" class="menu-button" routerLink="/usage">
+      <mat-icon>data_usage</mat-icon>
+      <span>Usage</span>
+    </button>
+  </div>
+  <button mat-raised-button color="primary" class="menu-button" routerLink="/support">
+    <mat-icon>payment</mat-icon>
+    <span>Support</span>
+  </button>
+</div>

@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {MatDialog} from "@angular/material/dialog";
+import {EndpointDialogComponent} from "../endpoint-dialog/endpoint-dialog.component";
 
 @Component({
   selector: 'app-api-overview',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ApiOverviewComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialog: MatDialog) {}
 
   ngOnInit(): void {
   }
 
+  openDialog(endpoint: string) {
+    this.dialog.open(EndpointDialogComponent,
+      {
+        data: `${endpoint}`
+      });
+  }
 }
