@@ -17,7 +17,9 @@ export class ApiOverviewComponent implements OnInit {
   openDialog(endpoint: string) {
     this.dialog.open(EndpointDialogComponent,
       {
-        data: `${endpoint}`
+        data: `${endpoint}`,
+        height: '500px',
+        width: '800px'
       });
   }
 }

@@ -1,5 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import {MAT_DIALOG_DATA} from "@angular/material/dialog";
+import { MAT_DIALOG_DATA } from "@angular/material/dialog";
+import { EndpointsService } from "../services/endpoints.service";
 
 @Component({
   selector: 'app-endpoint-dialog',
@@ -8,9 +9,26 @@ import {MAT_DIALOG_DATA} from "@angular/material/dialog";
 })
 export class EndpointDialogComponent implements OnInit {
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data: string) { }
+  formatted:string = "";
 
-  ngOnInit(): void {
+  constructor(@Inject(MAT_DIALOG_DATA) public data: string, private endpointsService: EndpointsService) {
+    this.loadData()
   }
 
+  ngOnInit() {
+
+  }
+
+  loadData() {
+    this.endpointsService.getData(this.data)
+      .subscribe((data: any) => {
+        this.formatted = JSON.stringify(data, null, 2);
+      })
+  }
+
+
+
 }
+
+
+

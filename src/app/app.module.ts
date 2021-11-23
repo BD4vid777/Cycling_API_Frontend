@@ -21,6 +21,8 @@ import {MatTabsModule} from "@angular/material/tabs";
 import {MatDialogModule} from "@angular/material/dialog";
 import { EndpointDialogComponent } from './endpoint-dialog/endpoint-dialog.component';
 import {MatTooltipModule} from "@angular/material/tooltip";
+import {ClipboardModule} from "@angular/cdk/clipboard";
+import {MatGridListModule} from "@angular/material/grid-list";
 
 @NgModule({
   declarations: [
@@ -46,7 +48,9 @@ import {MatTooltipModule} from "@angular/material/tooltip";
     MatChipsModule,
     MatTabsModule,
     MatDialogModule,
-    MatTooltipModule
+    MatTooltipModule,
+    ClipboardModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,1 +1,9 @@
-<p>{{ data }}</p>
+<h1>Data preview in JSON format</h1>
+<mat-divider></mat-divider>
+<h2>Collected from <strong>{{ data }}</strong> endpoint</h2>
+<button mat-raised-button color="primary" [cdkCopyToClipboard]="formatted">
+  <span class="material-icons">content_copy</span>
+  Copy to clipboard
+</button>
+
+<textarea readonly id="data-response-body" contenteditable="false">{{ formatted }}</textarea>

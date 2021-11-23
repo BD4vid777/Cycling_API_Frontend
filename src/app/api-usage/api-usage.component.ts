@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EndpointsService } from "../services/endpoints.service";
 
 @Component({
   selector: 'app-api-usage',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ApiUsageComponent implements OnInit {
 
-  constructor() { }
+  teams: any[] = [];
+  team: any[] = [];
+  riders: any[] = [];
+  rider: any[] = [];
+
+
+  constructor(private endpointsService: EndpointsService) { }
 
   ngOnInit(): void {
+  }
+
+  getTheData(endpoint: string, dataset: any[]) {
+    this.endpointsService.getData(endpoint)
+      .subscribe((response: any) => dataset = response.data)
   }
 
 }
