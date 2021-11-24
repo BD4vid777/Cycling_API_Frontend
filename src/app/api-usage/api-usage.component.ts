@@ -9,19 +9,17 @@ import { EndpointsService } from "../services/endpoints.service";
 export class ApiUsageComponent implements OnInit {
 
   teams: any[] = [];
-  team: any[] = [];
-  riders: any[] = [];
-  rider: any[] = [];
 
-
-  constructor(private endpointsService: EndpointsService) { }
+  constructor(private endpointsService: EndpointsService) {
+    this.getTeams("/teams")
+  }
 
   ngOnInit(): void {
   }
 
-  getTheData(endpoint: string, dataset: any[]) {
+  getTeams(endpoint: string) {
     this.endpointsService.getData(endpoint)
-      .subscribe((response: any) => dataset = response.data)
+      .subscribe((response: any) => this.teams = response.data)
   }
 
 }
