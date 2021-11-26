@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { EndpointsService } from "../services/endpoints.service";
 
 @Component({
   selector: 'app-api-usage',
@@ -8,18 +7,16 @@ import { EndpointsService } from "../services/endpoints.service";
 })
 export class ApiUsageComponent implements OnInit {
 
-  teams: any[] = [];
+  teamShortUrlToSend: string = ''
 
-  constructor(private endpointsService: EndpointsService) {
-    this.getTeams("/teams")
+  constructor() {
   }
 
   ngOnInit(): void {
   }
 
-  getTeams(endpoint: string) {
-    this.endpointsService.getData(endpoint)
-      .subscribe((response: any) => this.teams = response.data)
+  teamToDisplay(teamShortUrl: string) {
+    this.teamShortUrlToSend = teamShortUrl
+    console.log(this.teamShortUrlToSend)
   }
-
 }

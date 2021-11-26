@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {EndpointsService} from "../../services/endpoints.service";
 
 @Component({
@@ -9,8 +9,16 @@ import {EndpointsService} from "../../services/endpoints.service";
 export class TeamComponent implements OnInit {
   team: any[] = [];
 
+  @Input() teamShortUrlUpdated = ''
+
   constructor(private endpointsService: EndpointsService) {
     this.getTeam("/teams/deceuninck-quick-step-2021")
+  }
+
+  ngOnChanges() {
+    if (this.teamShortUrlUpdated !== '') {
+      this.getTeam("/teams/" + this.teamShortUrlUpdated)
+    }
   }
 
   ngOnInit(): void {

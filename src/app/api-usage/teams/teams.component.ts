@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Output, EventEmitter} from '@angular/core';
 import {EndpointsService} from "../../services/endpoints.service";
 
 @Component({
@@ -24,5 +24,12 @@ export class TeamsComponent implements OnInit {
       .subscribe((response: any) => {
         this.dataSource = response
       })
+  }
+
+  @Output() teamToDisplay = new EventEmitter<string>();
+
+
+  showTeam(shortUrl: string) {
+    this.teamToDisplay.emit(shortUrl)
   }
 }
