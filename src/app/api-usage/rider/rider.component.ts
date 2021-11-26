@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import { EndpointsService } from "../../services/endpoints.service";
 
 @Component({
@@ -9,8 +9,16 @@ import { EndpointsService } from "../../services/endpoints.service";
 export class RiderComponent implements OnInit {
   rider: any[] = [];
 
+  @Input() riderShortUrlUpdated = ''
+
   constructor(private endpointsService: EndpointsService) {
     this.getRider("/riders/mathieu-van-der-poel")
+  }
+
+  ngOnChanges() {
+    if (this.riderShortUrlUpdated !== '') {
+      this.getRider("/riders/" + this.riderShortUrlUpdated)
+    }
   }
 
   ngOnInit(): void {

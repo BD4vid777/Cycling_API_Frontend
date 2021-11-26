@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Output, EventEmitter} from '@angular/core';
 import { EndpointsService } from "../../services/endpoints.service";
 
 @Component({
@@ -24,5 +24,11 @@ export class RidersComponent implements OnInit {
       .subscribe((response: any) => {
         this.dataSource = response
       })
+  }
+
+  @Output() riderToDisplay = new EventEmitter<string>();
+
+  showRider(shortUrl: string) {
+    this.riderToDisplay.emit(shortUrl)
   }
 }

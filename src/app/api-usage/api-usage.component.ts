@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ApiUsageComponent implements OnInit {
 
   teamShortUrlToSend: string = ''
+  riderShortUrlToSend: string = ''
 
   constructor() {
   }
@@ -17,6 +18,9 @@ export class ApiUsageComponent implements OnInit {
 
   teamToDisplay(teamShortUrl: string) {
     this.teamShortUrlToSend = teamShortUrl
-    console.log(this.teamShortUrlToSend)
+  }
+
+  riderToDisplay(riderShortUrl: string) {
+    this.riderShortUrlToSend = riderShortUrl
   }
 }
