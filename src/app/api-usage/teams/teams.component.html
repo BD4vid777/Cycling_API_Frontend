@@ -1,11 +1,11 @@
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+<table mat-table id="teamsTable" [dataSource]="dataSource" class="mat-elevation-z8">
 
   <!--- Note that these columns can be defined in any order.
         The actual rendered columns are set as a property on the row definition" -->
 
   <!-- Position Column -->
   <ng-container matColumnDef="position">
-    <th mat-header-cell *matHeaderCellDef> No. </th>
+    <th mat-header-cell *matHeaderCellDef> Position </th>
     <td mat-cell *matCellDef="let element"> {{element.position}} </td>
   </ng-container>
 
@@ -18,7 +18,7 @@
   <!-- Symbol Column -->
   <ng-container matColumnDef="country">
     <th mat-header-cell *matHeaderCellDef> Country </th>
-    <td mat-cell *matCellDef="let element"><img src="{{element.countryFlag}}" alt=""></td>
+    <td mat-cell *matCellDef="let element"><img src="{{element.countryFlag}}" alt="Country Code for the team is {{element.countryCode}}"></td>
   </ng-container>
 
   <!-- Name Column -->

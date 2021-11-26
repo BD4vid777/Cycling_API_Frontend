@@ -17,7 +17,6 @@ export class TeamsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
   }
 
   getTeams(endpoint: string) {
@@ -26,5 +25,4 @@ export class TeamsComponent implements OnInit {
         this.dataSource = response
       })
   }
-
 }

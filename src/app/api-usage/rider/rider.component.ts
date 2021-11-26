@@ -18,6 +18,6 @@ export class RiderComponent implements OnInit {
 
   getRider(endpoint: string) {
     this.endpointsService.getData(endpoint)
-      .subscribe((response:any) => this.rider = response.data)
+      .subscribe((response:any) => this.rider = response)
   }
 }

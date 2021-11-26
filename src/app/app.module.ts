@@ -28,6 +28,8 @@ import { RidersComponent } from './api-usage/riders/riders.component';
 import { RiderComponent } from './api-usage/rider/rider.component';
 import { TeamComponent } from './api-usage/team/team.component';
 import {MatTableModule} from "@angular/material/table";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatInputModule} from "@angular/material/input";
 
 @NgModule({
   declarations: [
@@ -43,25 +45,27 @@ import {MatTableModule} from "@angular/material/table";
     RiderComponent,
     TeamComponent
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        BrowserAnimationsModule,
-        MatCardModule,
-        HttpClientModule,
-        MatToolbarModule,
-        MatSidenavModule,
-        MatListModule,
-        MatButtonModule,
-        MatIconModule,
-        MatChipsModule,
-        MatTabsModule,
-        MatDialogModule,
-        MatTooltipModule,
-        ClipboardModule,
-        MatGridListModule,
-        MatTableModule
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatCardModule,
+    HttpClientModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatListModule,
+    MatButtonModule,
+    MatIconModule,
+    MatChipsModule,
+    MatTabsModule,
+    MatDialogModule,
+    MatTooltipModule,
+    ClipboardModule,
+    MatGridListModule,
+    MatTableModule,
+    MatFormFieldModule,
+    MatInputModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

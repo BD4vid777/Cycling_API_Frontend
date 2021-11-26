@@ -1,1 +1,44 @@
-<p>riders works!</p>
+<table mat-table id="teamsTable" [dataSource]="dataSource" class="mat-elevation-z8">
+
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="position">
+    <th mat-header-cell *matHeaderCellDef> Position </th>
+    <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+  </ng-container>
+
+  <!-- Country Column -->
+  <ng-container matColumnDef="country">
+    <th mat-header-cell *matHeaderCellDef> Country </th>
+    <td mat-cell *matCellDef="let element"><img src="{{element.countryFlag}}" alt="Country Code for the rider is {{element.countryCode}}"></td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> Name </th>
+    <td mat-cell *matCellDef="let element">{{element.name}}</td>
+  </ng-container>
+
+  <!-- Points per race day Column -->
+  <ng-container matColumnDef="pointPer">
+    <th mat-header-cell *matHeaderCellDef> Pts per race </th>
+    <td mat-cell *matCellDef="let element"> {{element["points per raceday"]}} </td>
+  </ng-container>
+
+  <!-- Points Column -->
+  <ng-container matColumnDef="points">
+    <th mat-header-cell *matHeaderCellDef> Points </th>
+    <td mat-cell *matCellDef="let element"> {{element.points}} </td>
+  </ng-container>
+
+  <!-- Race days Column -->
+  <ng-container matColumnDef="raceDays">
+    <th mat-header-cell *matHeaderCellDef> Race days </th>
+    <td mat-cell *matCellDef="let element"> {{element.racedays}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

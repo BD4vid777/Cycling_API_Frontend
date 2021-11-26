@@ -7,7 +7,10 @@ import { EndpointsService } from "../../services/endpoints.service";
   styleUrls: ['./riders.component.sass']
 })
 export class RidersComponent implements OnInit {
-  riders: any[] = [];
+
+  displayedColumns = ['position', 'country', 'name', 'pointPer', 'points', 'raceDays'];
+  // @ts-ignore
+  dataSource: any[];
 
   constructor(private endpointsService: EndpointsService) {
     this.getRiders("/riders")
@@ -18,6 +21,8 @@ export class RidersComponent implements OnInit {
 
   getRiders(endpoint: string) {
     this.endpointsService.getData(endpoint)
-      .subscribe((response:any) => this.riders = response.data)
+      .subscribe((response: any) => {
+        this.dataSource = response
+      })
   }
 }

@@ -18,6 +18,6 @@ export class TeamComponent implements OnInit {
 
   getTeam(endpoint: string) {
     this.endpointsService.getData(endpoint)
-      .subscribe((response:any) => this.team = response.data)
+      .subscribe((response:any) => this.team = response)
   }
 }
