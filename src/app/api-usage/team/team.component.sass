@@ -1,0 +1,71 @@
+.team-grid-container
+  display: grid
+  width: 100%
+  height: 100%
+  grid-template-columns: repeat(4, 1fr)
+  grid-template-rows: repeat(6, 1fr)
+  text-align: center
+  align-items: center
+  justify-items: center
+  gap: .5rem
+
+.team-flag
+  grid-column: 4/5
+  grid-row: 1/2
+  justify-self: flex-start
+
+.team-name
+  grid-column: 1/4
+  grid-row: 1/2
+  margin-bottom: 0
+  font-size: 1.75rem
+
+.team-shirt
+  grid-column: 1/3
+  grid-row: 2/6
+  transform: scale(1.2)
+
+.team-social-icons-container
+  grid-column: 1/3
+  grid-row: 6/7
+
+.team-short
+  grid-column: 3/5
+  grid-row: 2/3
+  margin-bottom: 0
+  font-size: 1.15rem
+  justify-self: flex-start
+
+.team-bike
+  grid-column: 3/5
+  grid-row: 3/4
+  margin-bottom: 0
+  font-size: 1.15rem
+  justify-self: flex-start
+
+.team-btn-riders
+  grid-column: 3/4
+  grid-row: 5/6
+  justify-self: flex-start
+
+.team-btn-staff
+  grid-column: 3/4
+  grid-row: 4/5
+  justify-self: flex-start
+
+.team-btn-lastV
+  grid-column: 3/4
+  grid-row: 6/7
+  justify-self: flex-start
+
+.team-btn-topV
+  grid-column: 4/5
+  grid-row: 6/7
+
+.team-social-icons-container svg
+  opacity: .7
+  transition: opacity 350ms ease-in-out, transform 350ms ease-in-out
+
+  &:hover
+    opacity: 1
+    transform: scale(1.2)
