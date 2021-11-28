@@ -11,12 +11,13 @@ export class RidersComponent implements OnInit {
   displayedColumns = ['position', 'country', 'name', 'pointPer', 'points', 'raceDays'];
   // @ts-ignore
   dataSource: any[];
+  searchValueRiders: string = '';
 
   constructor(private endpointsService: EndpointsService) {
-    this.getRiders("/riders")
   }
 
   ngOnInit(): void {
+    this.getRiders("/riders")
   }
 
   getRiders(endpoint: string) {

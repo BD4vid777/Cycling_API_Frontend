@@ -11,7 +11,7 @@ export class TeamsComponent implements OnInit {
   displayedColumns = ['position', 'before', 'country', 'name', 'class'];
   // @ts-ignore
   dataSource: any[];
-  searchValue: string = '';
+  searchValueTeams: string = '';
 
   constructor(private endpointsService: EndpointsService) {  }
 

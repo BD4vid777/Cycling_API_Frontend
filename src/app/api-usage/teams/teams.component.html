@@ -1,9 +1,9 @@
 <mat-form-field appearance="standard">
-  <mat-label>Filter</mat-label>
-  <input type="text" [(ngModel)]="searchValue" matInput  placeholder="Search by team name">
+  <mat-label>Search Team</mat-label>
+  <input type="text" [(ngModel)]="searchValueTeams" matInput  placeholder="Write team name">
 </mat-form-field>
 
-<table mat-table id="teamsTable" [dataSource]="dataSource | searchfilter:searchValue" class="mat-elevation-z8">
+<table mat-table id="teamsTable" [dataSource]="dataSource | searchfilter:searchValueTeams" class="mat-elevation-z8">
 
   <!--- Note that these columns can be defined in any order.
         The actual rendered columns are set as a property on the row definition" -->

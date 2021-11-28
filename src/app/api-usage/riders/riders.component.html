@@ -1,4 +1,9 @@
-<table mat-table id="teamsTable" [dataSource]="dataSource" class="mat-elevation-z8">
+<mat-form-field appearance="standard">
+  <mat-label>Search Rider</mat-label>
+  <input type="text" [(ngModel)]="searchValueRiders" matInput  placeholder="Write Rider name">
+</mat-form-field>
+
+<table mat-table id="teamsTable" [dataSource]="dataSource | searchfilter:searchValueRiders" class="mat-elevation-z8">
 
   <!--- Note that these columns can be defined in any order.
         The actual rendered columns are set as a property on the row definition" -->
