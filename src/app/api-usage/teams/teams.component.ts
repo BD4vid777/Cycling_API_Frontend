@@ -1,4 +1,4 @@
-import {Component, OnInit, Output, EventEmitter} from '@angular/core';
+import {Component, Output, EventEmitter, OnInit} from '@angular/core';
 import {EndpointsService} from "../../services/endpoints.service";
 
 @Component({
@@ -11,12 +11,12 @@ export class TeamsComponent implements OnInit {
   displayedColumns = ['position', 'before', 'country', 'name', 'class'];
   // @ts-ignore
   dataSource: any[];
+  searchValue: string = '';
 
-  constructor(private endpointsService: EndpointsService) {
+  constructor(private endpointsService: EndpointsService) {  }
+
+  ngOnInit() {
     this.getTeams("/teams")
-  }
-
-  ngOnInit(): void {
   }
 
   getTeams(endpoint: string) {
@@ -27,7 +27,6 @@ export class TeamsComponent implements OnInit {
   }
 
   @Output() teamToDisplay = new EventEmitter<string>();
-
 
   showTeam(shortUrl: string) {
     this.teamToDisplay.emit(shortUrl)

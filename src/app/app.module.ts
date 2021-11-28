@@ -30,6 +30,8 @@ import { TeamComponent } from './api-usage/team/team.component';
 import {MatTableModule} from "@angular/material/table";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
+import { FormsModule } from '@angular/forms';
+import { SearchfilterPipe } from './searchfilter.pipe';
 
 @NgModule({
   declarations: [
@@ -43,7 +45,8 @@ import {MatInputModule} from "@angular/material/input";
     TeamsComponent,
     RidersComponent,
     RiderComponent,
-    TeamComponent
+    TeamComponent,
+    SearchfilterPipe
   ],
   imports: [
     BrowserModule,
@@ -64,7 +67,8 @@ import {MatInputModule} from "@angular/material/input";
     MatGridListModule,
     MatTableModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

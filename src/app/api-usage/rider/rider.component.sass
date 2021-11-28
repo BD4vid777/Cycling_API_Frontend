@@ -1,0 +1,103 @@
+.rider-grid-container
+  display: grid
+  width: 100%
+  height: 100%
+  grid-template-columns: repeat(10, 1fr)
+  grid-template-rows: repeat(9, 1fr)
+  text-align: center
+  align-items: center
+  justify-items: center
+  gap: .5rem
+
+.rider-name
+  grid-column: 1/7
+  grid-row: 1/2
+  margin-bottom: 0
+  justify-self: flex-start
+  font-size: 1.75rem
+
+.rider-team
+  grid-column: 7/-1
+  grid-row: 1/2
+  margin-bottom: 0
+  justify-self: flex-start
+  font-size: 1rem
+
+.rider-photo
+  grid-column: 1/5
+  grid-row: 2/9
+
+.rider-birth-age
+  grid-column: 5/-1
+  grid-row: span 1
+  justify-self: flex-start
+  align-self: flex-end
+
+.rider-height
+  grid-column: 5/8
+  grid-row: 3/4
+  justify-self: flex-start
+
+.rider-weight
+  grid-column: 8/10
+  grid-row: 3/4
+  justify-self: flex-start
+
+.rider-flag
+  grid-column: 7/8
+  grid-row: 4/5
+  justify-self: flex-start
+
+.rider-nationality
+  grid-column: 5/7
+  grid-row: 4/5
+  justify-self: flex-start
+
+.key-stats
+  grid-column: 5/8
+  grid-row: 5/6
+  margin-bottom: 0
+  justify-self: flex-start
+
+.rider-wins
+  grid-column: 5/8
+  grid-row: 6/7
+  justify-self: flex-start
+
+.rider-grands
+  grid-column: 5/8
+  grid-row: 7/8
+  justify-self: flex-start
+
+.rider-classics
+  grid-column: 5/8
+  grid-row: 8/9
+  justify-self: flex-start
+
+.rider-btn-top
+  grid-column: 5/7
+  grid-row: 9/10
+  width: 100%
+
+.rider-btn-ranking
+  grid-column: 7/9
+  grid-row: 9/10
+  width: 100%
+
+.rider-btn-teams
+  grid-column: 9/11
+  grid-row: 9/10
+  width: 100%
+
+.rider-social-icons-container
+  grid-column: 1/5
+  grid-row: 9/-1
+
+.rider-social-icons-container svg
+  opacity: .7
+  transition: opacity 350ms ease-in-out, transform 350ms ease-in-out
+
+  &:hover
+    opacity: 1
+    transform: scale(1.2)
+

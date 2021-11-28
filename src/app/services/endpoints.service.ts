@@ -18,7 +18,6 @@ export class EndpointsService {
   constructor(private http: HttpClient) { }
 
   getData(endpoint: string) {
-    console.log(this.apiUrl + endpoint, httpOptions)
     return this.http.get(this.apiUrl + endpoint, httpOptions)
   }
 }

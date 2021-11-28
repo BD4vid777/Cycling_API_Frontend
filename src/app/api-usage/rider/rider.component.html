@@ -1,1 +1,48 @@
-<p>rider works!</p>
+<div class="rider-grid-container" *ngFor="let item of rider">
+  <h2 class="rider-name">{{item["Main info"].name}}</h2>
+  <h2 class="rider-team">{{item["Main info"].team}}</h2>
+  <img
+    [attr.src]="item['Main info']['riders photo url'] != 'https://www.procyclingstats.com/' ? item['Main info']['riders photo url'] : 'assets/img/pic_unavailable.png'"
+    [attr.alt]="item['Main info']['riders photo url'] != 'https://www.procyclingstats.com/' ? 'Rider photo' : 'Rider photo unavailable'"
+    class="rider-photo"
+  >
+  <div class="rider-social-icons-container">
+    <a href="{{item.Social.strava}}"
+       [attr.style]="item.Social.strava != null ? '' : 'display: none'"
+       aria-label="Social button for rider Strava Account" target="_blank" rel="noopener">
+      <svg xmlns="http://www.w3.org/2000/svg" aria-label="Strava" role="img" viewBox="0 0 512 512" height="24px" width="24px" style="padding-top: 2px; padding-bottom: 3px"><rect width="512" height="512" rx="15%" fill="#3f51b5"/><path fill="#fff" d="M120 288L232 56l112 232h-72l-40-96-40 96z"/><path fill="#fff" d="M280 288l32 72 32-72h48l-80 168-80-168z"/></svg>
+    </a>
+    <a href="{{item.Social.website}}"
+       [attr.style]="item.Social.website != null ? '' : 'display: none'"
+       aria-label="Social button for rider website" target="_blank" rel="noopener">
+      <svg fill="#3f51b5" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="24px" height="24px"><path d="M 5 3 C 3.9069372 3 3 3.9069372 3 5 L 3 19 C 3 20.093063 3.9069372 21 5 21 L 19 21 C 20.093063 21 21 20.093063 21 19 L 21 5 C 21 3.9069372 20.093063 3 19 3 L 5 3 z M 7 5 C 7.552 5 8 5.448 8 6 C 8 6.552 7.552 7 7 7 C 6.448 7 6 6.552 6 6 C 6 5.448 6.448 5 7 5 z M 10 5 C 10.552 5 11 5.448 11 6 C 11 6.552 10.552 7 10 7 C 9.448 7 9 6.552 9 6 C 9 5.448 9.448 5 10 5 z M 13 5 L 19 5 L 19 7 L 13 7 L 13 5 z M 5 9 L 19 9 L 19 19 L 5 19 L 5 9 z M 8.5 11 A 1.5 1.5 0 0 0 7 12.5 A 1.5 1.5 0 0 0 8.5 14 A 1.5 1.5 0 0 0 10 12.5 A 1.5 1.5 0 0 0 8.5 11 z M 13 11 L 13 13 L 17 13 L 17 11 L 13 11 z M 8.5 15 C 7.666 15 6 15.419 6 16.25 L 6 17 L 11 17 L 11 16.25 C 11 15.419 9.334 15 8.5 15 z M 13 15 L 13 17 L 17 17 L 17 15 L 13 15 z"/></svg>
+    </a>
+    <a href="{{item.Social.twitter}}"
+       [attr.style]="item.Social.twitter != null ? '' : 'display: none'"
+       aria-label="Social button for rider Twitter Account" target="_blank" rel="noopener">
+      <svg fill="#3f51b5" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="24px" height="24px"><path d="M19,3H5C3.895,3,3,3.895,3,5v14c0,1.105,0.895,2,2,2h14c1.105,0,2-0.895,2-2V5C21,3.895,20.105,3,19,3z M17.05,9.514 c0,0.086,0,0.171,0,0.343c0,3.257-2.486,7.029-7.029,7.029c-1.371,0-2.657-0.429-3.771-1.114c0.171,0,0.429,0,0.6,0 c1.114,0,2.229-0.429,3.086-1.029c-1.114,0-1.971-0.771-2.314-1.714c0.171,0,0.343,0.086,0.429,0.086c0.257,0,0.429,0,0.686-0.086 c-1.114-0.257-1.971-1.2-1.971-2.4c0.343,0.171,0.686,0.257,1.114,0.343c-0.686-0.6-1.114-1.286-1.114-2.143 c0-0.429,0.086-0.857,0.343-1.2c1.2,1.457,3,2.486,5.057,2.571c0-0.171-0.086-0.343-0.086-0.6c0-1.371,1.114-2.486,2.486-2.486 c0.686,0,1.371,0.257,1.8,0.771c0.6-0.086,1.114-0.343,1.543-0.6c-0.171,0.6-0.6,1.029-1.114,1.371 c0.514-0.086,0.943-0.171,1.457-0.429C17.907,8.743,17.479,9.171,17.05,9.514z"/></svg>
+    </a>
+    <a href="{{item.Social.facebook}}"
+       [attr.style]="item.Social.facebook != null ? '' : 'display: none'"
+       aria-label="Social button for rider Facebook Account" target="_blank" rel="noopener">
+      <svg fill="#3f51b5" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="24px" height="24px"><path d="M19,3H5C3.895,3,3,3.895,3,5v14c0,1.105,0.895,2,2,2h7.621v-6.961h-2.343v-2.725h2.343V9.309 c0-2.324,1.421-3.591,3.495-3.591c0.699-0.002,1.397,0.034,2.092,0.105v2.43h-1.428c-1.13,0-1.35,0.534-1.35,1.322v1.735h2.7 l-0.351,2.725h-2.365V21H19c1.105,0,2-0.895,2-2V5C21,3.895,20.105,3,19,3z"/></svg>
+    </a>
+    <a href="{{item.Social.instagram}}"
+       [attr.style]="item.Social.instagram != null ? '' : 'display: none'"
+       aria-label="Social button for rider Instagram Account" target="_blank" rel="noopener">
+      <svg fill="#3f51b5" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="24px" height="24px"><path d="M 8 3 C 5.239 3 3 5.239 3 8 L 3 16 C 3 18.761 5.239 21 8 21 L 16 21 C 18.761 21 21 18.761 21 16 L 21 8 C 21 5.239 18.761 3 16 3 L 8 3 z M 18 5 C 18.552 5 19 5.448 19 6 C 19 6.552 18.552 7 18 7 C 17.448 7 17 6.552 17 6 C 17 5.448 17.448 5 18 5 z M 12 7 C 14.761 7 17 9.239 17 12 C 17 14.761 14.761 17 12 17 C 9.239 17 7 14.761 7 12 C 7 9.239 9.239 7 12 7 z M 12 9 A 3 3 0 0 0 9 12 A 3 3 0 0 0 12 15 A 3 3 0 0 0 15 12 A 3 3 0 0 0 12 9 z"/></svg>
+    </a>
+  </div>
+  <div class="rider-birth-age">Birth (years) - <strong>{{item["Main info"]["date of birth (years)"]}}</strong></div>
+  <div class="rider-height">Height: <strong>{{item["Main info"].height}}</strong></div>
+  <div class="rider-weight">Weight: <strong>{{item["Main info"].weight}}</strong></div>
+  <img class="rider-flag" src="{{item['Main info'].countryFlag}}" alt="Rider country code: {{item['Main info'].countryCode}}">
+  <div class="rider-nationality">{{item["Main info"].nationality}}</div>
+  <h3 class="key-stats"><strong>Key Statistics</strong></h3>
+  <div class="rider-wins">Wins: {{item["Key Statistics"].Wins}}</div>
+  <div class="rider-grands">Grand Tours ridden: {{item["Key Statistics"]["Grand Tours Ridden"]}}</div>
+  <div class="rider-classics">Classics ridden: {{item["Key Statistics"]["Classics Ridden"]}}</div>
+  <button mat-raised-button color="primary" class="rider-btn-top">Top Results</button>
+  <button mat-raised-button color="primary" class="rider-btn-ranking">Rankings</button>
+  <button mat-raised-button color="primary" class="rider-btn-teams">Teams</button>
+</div>
