@@ -1,6 +1,6 @@
 <div class="team-grid-container" *ngFor="let item of team">
   <img src="{{item['Main info'].countryFlag}}" alt="Team country code is {{item['Main info'].countryCode}}" class="team-flag">
-  <h2 class="team-name">{{item['Main info'].name}}</h2>
+  <h4 class="team-name">{{item['Main info'].name}}</h4>
   <img
     [attr.src]="item['Main info'].shirtImg != 'https://www.procyclingstats.com/' ? item['Main info'].shirtImg : 'assets/img/pic_unavailable.png'"
     [attr.alt]="item['Main info'].shirtImg != 'https://www.procyclingstats.com/' ? 'Team shirt' : 'Team shirt unavailable'"

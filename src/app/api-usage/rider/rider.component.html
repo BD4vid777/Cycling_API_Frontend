@@ -1,6 +1,6 @@
 <div class="rider-grid-container" *ngFor="let item of rider">
-  <h2 class="rider-name">{{item["Main info"].name}}</h2>
-  <h2 class="rider-team" (click)="showRidersTeam(item['Main info'].team)">{{item["Main info"].team}}</h2>
+  <h4 class="rider-name">{{item["Main info"].name}}</h4>
+  <h4 class="rider-team" (click)="showRidersTeam(item['Main info'].team)">{{item["Main info"].team}}</h4>
   <img
     [attr.src]="item['Main info']['riders photo url'] != 'https://www.procyclingstats.com/' ? item['Main info']['riders photo url'] : 'assets/img/pic_unavailable.png'"
     [attr.alt]="item['Main info']['riders photo url'] != 'https://www.procyclingstats.com/' ? 'Rider photo' : 'Rider photo unavailable'"
@@ -38,7 +38,7 @@
   <div class="rider-weight">Weight: <strong>{{item["Main info"].weight}}</strong></div>
   <img class="rider-flag" src="{{item['Main info'].countryFlag}}" alt="Rider country code: {{item['Main info'].countryCode}}">
   <div class="rider-nationality">{{item["Main info"].nationality}}</div>
-  <h3 class="key-stats"><strong>Key Statistics</strong></h3>
+  <h5 class="key-stats"><strong>Key Statistics</strong></h5>
   <div class="rider-wins">Wins: {{item["Key Statistics"].Wins}}</div>
   <div class="rider-grands">Grand Tours ridden: {{item["Key Statistics"]["Grand Tours Ridden"]}}</div>
   <div class="rider-classics">Classics ridden: {{item["Key Statistics"]["Classics Ridden"]}}</div>
