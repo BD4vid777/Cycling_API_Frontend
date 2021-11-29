@@ -1,6 +1,6 @@
 <div class="rider-grid-container" *ngFor="let item of rider">
   <h2 class="rider-name">{{item["Main info"].name}}</h2>
-  <h2 class="rider-team">{{item["Main info"].team}}</h2>
+  <h2 class="rider-team" (click)="showRidersTeam(item['Main info'].team)">{{item["Main info"].team}}</h2>
   <img
     [attr.src]="item['Main info']['riders photo url'] != 'https://www.procyclingstats.com/' ? item['Main info']['riders photo url'] : 'assets/img/pic_unavailable.png'"
     [attr.alt]="item['Main info']['riders photo url'] != 'https://www.procyclingstats.com/' ? 'Rider photo' : 'Rider photo unavailable'"
