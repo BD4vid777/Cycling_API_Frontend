@@ -1,11 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from "@angular/common/http";
-import { environment } from "../../environments/environment";
+import { environment } from "../../environments/environment.dev";
+
 
 const httpOptions = {
   headers: new HttpHeaders({
     'x-rapidapi-host': 'pro-cycling-stats.p.rapidapi.com',
-    'x-rapidapi-key': environment.RAPID_API_KEY
+    // @ts-ignore
+    'x-rapidapi-key': environment.RAPID_API_KEY || process.env.RAPID_API_KEY
   })
 }
 
