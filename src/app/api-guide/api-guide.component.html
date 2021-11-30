@@ -1,4 +1,48 @@
 <div class="main-content-container">
-<h1>How to use PCS API in three easy steps</h1>
+<h2>How to use PCS API in two easy steps</h2>
 
+<mat-stepper orientation="vertical">
+  <mat-step>
+    <ng-template matStepLabel>Step 1 - Get Your FREE API Key</ng-template>
+    <ng-template matStepContent>
+      <p>Go to API panel on RapidAPI</p>
+      <a mat-raised-button href="https://rapidapi.com/BD4vid777/api/pro-cycling-stats/" color="primary" target="_blank">Click Here and login to API HUB</a>
+      <br><br>
+      <p>Copy your "X-RapidAPI-Key"</p>
+    </ng-template>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Step 2 - Paste code snippet into your app</ng-template>
+    <ng-template style="position: relative" matStepContent>
+      <textarea readonly contenteditable="false" style="height: 260px">{{codeSample}}</textarea>
+      <button mat-icon-button style="position: absolute; top: 30px; right: 20px" color="accent" [cdkCopyToClipboard]="codeSample">
+        <mat-icon>content_copy</mat-icon>
+      </button>
+      <br><br>
+      <p>Use it as You wish and check our example here --->  <a mat-raised-button href="/usage" color="primary">Example of usage</a></p>
+      <p>Snippets to all ENDPOINTS available at RapidAPI on  <a mat-raised-button href="https://rapidapi.com/BD4vid777/api/pro-cycling-stats/" color="primary" target="_blank">API HUB</a></p>
+
+    </ng-template>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Step 3 - OPTIONAL (Clone Code and customize It)</ng-template>
+    <ng-template matStepContent>
+      <div style="position: relative; width: fit-content">
+        <textarea readonly contenteditable="false" style="height: 55px; width: 500px; margin-top: 0">{{cloneRepo}}</textarea>
+        <button mat-icon-button style="position: absolute; top: 10px; right: 10px" color="accent"
+                [cdkCopyToClipboard]="cloneRepo">
+          <mat-icon>content_copy</mat-icon>
+        </button>
+      </div>
+      <div style="width: fit-content">
+        <textarea readonly contenteditable="false" style="height: 55px; width: fit-content; margin-top: 0">npm install</textarea>
+      </div>
+      <div style="width: fit-content">
+        <textarea readonly contenteditable="false" style="height: 55px; width: fit-content; margin-top: 0">npm run start</textarea>
+      </div>
+      <br><br>
+      <p>Or visit <a mat-raised-button href="https://github.com/BD4vid777/Cycling_API" color="primary" target="_blank">API Repository</a> and check the code</p>
+    </ng-template>
+  </mat-step>
+</mat-stepper>
 </div>

@@ -32,6 +32,7 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import { FormsModule } from '@angular/forms';
 import { SearchfilterPipe } from './searchfilter.pipe';
+import {MatStepperModule} from "@angular/material/stepper";
 
 @NgModule({
   declarations: [
@@ -68,7 +69,8 @@ import { SearchfilterPipe } from './searchfilter.pipe';
     MatTableModule,
     MatFormFieldModule,
     MatInputModule,
-    FormsModule
+    FormsModule,
+    MatStepperModule
   ],
   providers: [],
   bootstrap: [AppComponent]
