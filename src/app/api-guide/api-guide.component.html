@@ -15,7 +15,7 @@
     <ng-template matStepLabel>Step 2 - Paste code snippet into your app</ng-template>
     <ng-template style="position: relative" matStepContent>
       <textarea readonly contenteditable="false" style="height: 260px">{{codeSample}}</textarea>
-      <button mat-icon-button style="position: absolute; top: 30px; right: 20px" color="accent" [cdkCopyToClipboard]="codeSample">
+      <button mat-icon-button style="position: absolute; top: 20px; right: 20px" color="accent" [cdkCopyToClipboard]="codeSample">
         <mat-icon>content_copy</mat-icon>
       </button>
       <br><br>
