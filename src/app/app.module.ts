@@ -33,6 +33,9 @@ import {MatInputModule} from "@angular/material/input";
 import { FormsModule } from '@angular/forms';
 import { SearchfilterPipe } from './searchfilter.pipe';
 import {MatStepperModule} from "@angular/material/stepper";
+import { TopDialogComponent } from './api-usage/rider/dialogs/top-dialog/top-dialog.component';
+import { RankingsDialogComponent } from './api-usage/rider/dialogs/rankings-dialog/rankings-dialog.component';
+import { TeamsDialogComponent } from './api-usage/rider/dialogs/teams-dialog/teams-dialog.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +50,10 @@ import {MatStepperModule} from "@angular/material/stepper";
     RidersComponent,
     RiderComponent,
     TeamComponent,
-    SearchfilterPipe
+    SearchfilterPipe,
+    TopDialogComponent,
+    RankingsDialogComponent,
+    TeamsDialogComponent
   ],
   imports: [
     BrowserModule,

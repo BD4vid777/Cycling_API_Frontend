@@ -42,7 +42,7 @@
   <div class="rider-wins">Wins: {{item["Key Statistics"].Wins}}</div>
   <div class="rider-grands">Grand Tours ridden: {{item["Key Statistics"]["Grand Tours Ridden"]}}</div>
   <div class="rider-classics">Classics ridden: {{item["Key Statistics"]["Classics Ridden"]}}</div>
-  <button mat-raised-button color="primary" class="rider-btn-top">Top Results</button>
-  <button mat-raised-button color="primary" class="rider-btn-ranking">Rankings</button>
-  <button mat-raised-button color="primary" class="rider-btn-teams">Teams</button>
+  <button mat-raised-button color="primary" class="rider-btn-top" (click)="openTop()">Top Results</button>
+  <button mat-raised-button color="primary" class="rider-btn-ranking" (click)="openRankings()" >Rankings</button>
+  <button mat-raised-button color="primary" class="rider-btn-teams" (click)="openTeams()">Teams</button>
 </div>

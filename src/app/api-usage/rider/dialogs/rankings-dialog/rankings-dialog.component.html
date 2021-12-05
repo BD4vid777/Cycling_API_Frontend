@@ -1,0 +1,35 @@
+<div class="rider-dialog">
+  <div class="rider-profile">
+    <div style="position: relative">
+      <h1>{{ridersName}}</h1>
+      <img src="{{ridersPhotoUrl}}" alt="{{ridersName}}">
+    </div>
+  </div>
+  <h2>PCS rankings positions per season</h2>
+
+  <!--  Material Table with rankings data -->
+  <table mat-table id="teamsTable" [dataSource]="rankings" class="mat-elevation-z8" style="width: 100%; text-align: center">
+
+    <!-- Year Column -->
+    <ng-container matColumnDef="year">
+      <th mat-header-cell *matHeaderCellDef> Year </th>
+      <td mat-cell *matCellDef="let element"> {{element.year}} </td>
+    </ng-container>
+
+    <!-- Points Column -->
+    <ng-container matColumnDef="points">
+      <th mat-header-cell *matHeaderCellDef> Points </th>
+      <td mat-cell *matCellDef="let element"> {{element.points}} </td>
+    </ng-container>
+
+    <!-- Ranking Column -->
+    <ng-container matColumnDef="ranking">
+      <th mat-header-cell *matHeaderCellDef> Ranking </th>
+      <td mat-cell *matCellDef="let element">{{element.ranking}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr class="table-row" mat-row *matRowDef="let row; columns: displayedColumns; let element"></tr>
+  </table>
+
+</div>

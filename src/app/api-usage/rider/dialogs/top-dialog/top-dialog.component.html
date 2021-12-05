@@ -1,0 +1,19 @@
+<div class="rider-dialog">
+  <div *ngFor="let item of riderData">
+    <div class="rider-profile">
+      <div style="position: relative">
+        <h1>{{item["Main info"].name}}</h1>
+        <img src="{{item['Main info']['riders photo url']}}" alt="{{item['Main info'].name}}">
+      </div>
+    </div>
+    <h2>Top Results</h2>
+    <div class="results-container">
+      <div *ngFor="let result of item['Top results']">
+        <div class="single-result mat-elevation-z4">
+          <h3>{{result.races}}</h3>
+          <p>{{result.years}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
