@@ -81,7 +81,7 @@ mat-dialog-container
 
 .main-container
   height: 95%
-  width: 80%
+  width: clamp(300px, 75%, 95%)
   max-width: 1400px
   background-color: hsla(360, 100%, 100%, .5)
   backdrop-filter: blur(10px) saturate(200%)
@@ -95,6 +95,13 @@ mat-dialog-container
   .main-container
     width: 95%
 
+.mat-toolbar
+  @media (max-width: 1024px)
+    h1
+      font-size: .75rem!important
+  @media (max-width: 425px)
+    h1
+      display: none
 
 .main-content-container
   display: flex
@@ -104,18 +111,29 @@ mat-dialog-container
   margin-top: 1rem
   margin-bottom: 1rem
   width: 100%
+  text-align: center
 
   h1
     font-size: 2.5rem
     font-weight: 700
+    @media (max-width: 1024px)
+      font-size: 1.5rem
 
   h2
     font-size: 1.5rem
     font-weight: 500
+    @media (max-width: 1024px)
+      font-size: 1rem
+    @media (max-width: 425px)
+      font-size: .85rem
 
   h1, h2
     margin-bottom: .5rem
     text-transform: uppercase
+    @media (max-width: 1024px)
+      margin-block: .125rem
 
-
+footer
+  @media (max-width: 425px)
+    font-size: .75rem
 

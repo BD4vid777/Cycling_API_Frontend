@@ -1,6 +1,11 @@
 <div class="main-container">
   <mat-toolbar color="primary">
-    <h1>Welcome to Pro Cycling Stats Unofficial API</h1>
+    <div style="display: flex; align-items: center">
+      <button mat-icon-button>
+        <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+      </button>
+      <h1>Welcome to Pro Cycling Stats Unofficial API Manual</h1>
+    </div>
     <div class="links">
       <a href="https://github.com/BD4vid777/Cycling_API" target="_blank" rel="noopener" mat-button aria-label="Github repository link">
         <span class="mat-button-wrapper">
@@ -16,7 +21,7 @@
     </div>
   </mat-toolbar>
   <mat-sidenav-container>
-    <mat-sidenav mode="side" opened >
+    <mat-sidenav #sidenav>
       <app-api-sidenav></app-api-sidenav>
     </mat-sidenav>
     <mat-sidenav-content class="content">

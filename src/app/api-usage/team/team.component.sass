@@ -7,11 +7,16 @@
   align-items: center
   justify-items: center
   gap: .5rem
+  @media (max-width: 1440px)
+    grid-template-columns: repeat(3, 1fr)
+
 
 .team-flag
   grid-column: 4/5
   grid-row: 1/2
   justify-self: flex-start
+  @media (max-width: 1440px)
+    grid-column: 3/4
 
 .team-name
   grid-column: 1/4
@@ -22,15 +27,22 @@
   overflow: hidden
   white-space: nowrap
   text-overflow: ellipsis
+  @media (max-width: 1440px)
+    font-size: 1rem
+    grid-column: 1/3
 
 .team-shirt
   grid-column: 1/3
   grid-row: 2/6
   transform: scale(1.2)
+  @media (max-width: 1440px)
+    grid-column: 1/2
 
 .team-social-icons-container
   grid-column: 1/3
   grid-row: 6/7
+  @media (max-width: 1440px)
+    grid-column: 1/2
 
 .team-social-icons-container svg
   opacity: .7
@@ -47,6 +59,9 @@
   font-size: 1.15rem
   justify-self: flex-start
   align-self: flex-end
+  @media (max-width: 1440px)
+    font-size: 1rem
+    grid-column: 2/4
 
 .team-bike
   grid-column: 3/5
@@ -55,24 +70,43 @@
   font-size: 1.15rem
   justify-self: flex-start
   align-self: flex-start
+  @media (max-width: 1440px)
+    font-size: 1rem
+    grid-column: 2/4
 
 .team-btn-riders
   grid-column: 3/4
   grid-row: 4/5
   width: 100%
+  @media (max-width: 1440px)
+    font-size: .7rem
+    grid-column: 2/3
+    width: 90px
 
 .team-btn-staff
   grid-column: 4/5
   grid-row: 4/5
   width: 100%
+  @media (max-width: 1440px)
+    font-size: .7rem
+    grid-column: 3/4
+    width: 90px
 
 .team-btn-lastV
   grid-column: 3/4
   grid-row: 5/6
   width: 100%
+  @media (max-width: 1440px)
+    font-size: .7rem
+    grid-column: 2/3
+    width: 90px
 
 .team-btn-topV
   grid-column: 4/5
   grid-row: 5/6
   width: 100%
+  @media (max-width: 1440px)
+    font-size: .7rem
+    grid-column: 3/4
+    width: 90px
 

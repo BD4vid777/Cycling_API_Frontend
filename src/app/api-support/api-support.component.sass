@@ -1,19 +1,29 @@
 .support-container
-  width: 50%
+  width: 90%
   display: grid
   grid-template-columns: 1fr 1fr
   gap: 1rem
   align-items: center
   justify-items: center
   margin-top: 2rem
+  @media (max-width: 425px)
+    display: contents
+    margin-top: 1rem
 
   .myPhoto
     height: 200px
     border-radius: 100px
+    @media (max-width: 1024px)
+      height: 150px
+      width: 150px
+    @media (max-width: 425px)
+      margin-top: .5rem
 
   fieldset
     height: fit-content
     align-self: center
+    @media (max-width: 425px)
+      font-size: smaller
 
     p
       margin-bottom: 0
@@ -21,6 +31,17 @@
   .other-container
     grid-column: span 2
     margin-top: 2rem
+    @media (max-width: 425px)
+      margin-top: 1rem
+      h4
+        margin-bottom: .5rem
+
+  mat-divider
+    margin-block: 1.5rem
+    @media (max-width: 425px)
+      margin-block: .5rem
 
 .support-button
   margin-top: 3rem
+  @media (max-width: 425px)
+    margin-top: 1rem

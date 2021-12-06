@@ -2,7 +2,7 @@
 <h2>How to use PCS API in two easy steps</h2>
 
 <mat-stepper orientation="vertical">
-  <mat-step>
+  <mat-step style="padding-block: 10px!important;">
     <ng-template matStepLabel>Step 1 - Get Your FREE API Key</ng-template>
     <ng-template matStepContent>
       <p>Go to API panel on RapidAPI</p>
@@ -14,7 +14,7 @@
   <mat-step>
     <ng-template matStepLabel>Step 2 - Paste code snippet into your app</ng-template>
     <ng-template style="position: relative" matStepContent>
-      <textarea readonly contenteditable="false" style="height: 260px">{{codeSample}}</textarea>
+      <textarea readonly contenteditable="false" style="height: 200px">{{codeSample}}</textarea>
       <button mat-icon-button style="position: absolute; top: 20px; right: 20px" color="accent" [cdkCopyToClipboard]="codeSample">
         <mat-icon>content_copy</mat-icon>
       </button>
