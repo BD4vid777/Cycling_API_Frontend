@@ -9,6 +9,9 @@
   gap: .5rem
   @media (max-width: 1440px)
     grid-template-columns: repeat(3, 1fr)
+  @media (max-width: 425px)
+    grid-template-columns: 1fr 1fr
+
 
 .rider-name
   grid-column: 1/7
@@ -19,6 +22,10 @@
   @media (max-width: 1440px)
     font-size: 1rem
     grid-column: 1/3
+  @media (max-width: 425px)
+    grid-column: span 2
+    grid-row: 1/2
+    justify-self: center
 
 .rider-team
   grid-column: 7/-1
@@ -36,6 +43,11 @@
   transition: 350ms ease-in-out
   @media (max-width: 1440px)
     grid-column: 3/4
+  @media (max-width: 425px)
+    grid-column: span 2
+    grid-row: 2/3
+    justify-self: center
+    margin-block: .5rem
   &:hover
     color: #3f51b5
     transform: scale(1.05)
@@ -58,6 +70,9 @@
   grid-row: 2/9
   @media (max-width: 1440px)
     grid-column: 1/2
+  @media (max-width: 425px)
+    grid-column: span 2
+    grid-row: 3/4
 
 .rider-birth-age
   grid-column: 5/-1
@@ -67,6 +82,10 @@
   @media (max-width: 1440px)
     grid-column: 2/-1
     font-size: .75rem
+  @media (max-width: 425px)
+    grid-column: span 2
+    grid-row: 6/7
+    justify-self: center
 
 .rider-height
   grid-column: 5/8
@@ -75,6 +94,10 @@
   @media (max-width: 1440px)
     grid-column: 2/3
     font-size: .75rem
+  @media (max-width: 425px)
+    grid-column: 1/2
+    grid-row: 7/8
+    justify-self: flex-end
 
 .rider-weight
   grid-column: 8/10
@@ -83,6 +106,9 @@
   @media (max-width: 1440px)
     grid-column: 3/4
     font-size: .75rem
+  @media (max-width: 425px)
+    grid-column: 2/3
+    grid-row: 7/8
 
 .rider-flag
   grid-column: 7/8
@@ -90,6 +116,8 @@
   justify-self: flex-start
   @media (max-width: 1440px)
     grid-column: 3/4
+  @media (max-width: 425px)
+    display: none
 
 .rider-nationality
   grid-column: 5/7
@@ -98,6 +126,10 @@
   @media (max-width: 1440px)
     grid-column: 2/3
     font-size: .75rem
+  @media (max-width: 425px)
+    grid-column: span 2
+    justify-self: center
+    grid-row: 5/6
 
 .key-stats
   grid-column: 5/8
@@ -107,6 +139,10 @@
   @media (max-width: 1440px)
     grid-column: 2/4
     font-size: .75rem
+  @media (max-width: 425px)
+    grid-column: span 2
+    grid-row: 8/9
+    justify-self: center
 
 .rider-wins
   grid-column: 5/8
@@ -115,6 +151,10 @@
   @media (max-width: 1440px)
     grid-column: 2/4
     font-size: .75rem
+  @media (max-width: 425px)
+    grid-column: span 2
+    grid-row: 9/10
+    justify-self: center
 
 .rider-grands
   grid-column: 5/8
@@ -123,6 +163,10 @@
   @media (max-width: 1440px)
     grid-column: 2/4
     font-size: .75rem
+  @media (max-width: 425px)
+    grid-column: 1/2
+    grid-row: 10/11
+    justify-self: flex-end
 
 .rider-classics
   grid-column: 5/8
@@ -131,6 +175,9 @@
   @media (max-width: 1440px)
     grid-column: 2/4
     font-size: .75rem
+  @media (max-width: 425px)
+    grid-column: 2/3
+    grid-row: 10/11
 
 .rider-btn-top
   grid-column: 5/7
@@ -139,8 +186,11 @@
   @media (max-width: 1440px)
     grid-column: 2/4
     font-size: .7rem
-    width: 33%
+    width: 30%
     justify-self: flex-start
+  @media (max-width: 425px)
+    grid-column: 1/3
+    grid-row: 11/12
 
 .rider-btn-ranking
   grid-column: 7/9
@@ -149,8 +199,11 @@
   @media (max-width: 1440px)
     grid-column: 2/4
     font-size: .7rem
-    width: 33%
+    width: 30%
     justify-self: center
+  @media (max-width: 425px)
+    grid-column: 1/3
+    grid-row: 11/12
 
 .rider-btn-teams
   grid-column: 9/11
@@ -159,14 +212,20 @@
   @media (max-width: 1440px)
     grid-column: 2/4
     font-size: .7rem
-    width: 33%
+    width: 30%
     justify-self: flex-end
+  @media (max-width: 425px)
+    grid-column: 1/3
+    grid-row: 11/12
 
 .rider-social-icons-container
   grid-column: 1/5
   grid-row: 9/10
   @media (max-width: 1440px)
     grid-column: 1/2
+  @media (max-width: 425px)
+    grid-column: span 2
+    grid-row: 4/5
 
 .rider-social-icons-container svg
   opacity: .7
