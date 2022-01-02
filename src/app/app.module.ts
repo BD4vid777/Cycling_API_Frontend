@@ -36,6 +36,8 @@ import {MatStepperModule} from "@angular/material/stepper";
 import { TopDialogComponent } from './api-usage/rider/dialogs/top-dialog/top-dialog.component';
 import { RankingsDialogComponent } from './api-usage/rider/dialogs/rankings-dialog/rankings-dialog.component';
 import { TeamsDialogComponent } from './api-usage/rider/dialogs/teams-dialog/teams-dialog.component';
+import { StaffDialogComponent } from './api-usage/team/dialogs/staff-dialog/staff-dialog.component';
+import { VictoriesDialogComponent } from './api-usage/team/dialogs/victories-dialog/victories-dialog.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +55,9 @@ import { TeamsDialogComponent } from './api-usage/rider/dialogs/teams-dialog/tea
     SearchfilterPipe,
     TopDialogComponent,
     RankingsDialogComponent,
-    TeamsDialogComponent
+    TeamsDialogComponent,
+    StaffDialogComponent,
+    VictoriesDialogComponent
   ],
   imports: [
     BrowserModule,

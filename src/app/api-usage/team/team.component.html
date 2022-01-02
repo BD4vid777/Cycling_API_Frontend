@@ -8,10 +8,8 @@
   >
   <p class="team-short">Team shortcut: <strong>{{item['Main info'].abbreviation}}</strong></p>
   <p class="team-bike">Bike brand: <strong>{{item['Main info'].bike}}</strong></p>
-  <button mat-raised-button color="primary" class="team-btn-riders">Riders</button>
-  <button mat-raised-button color="primary" class="team-btn-staff">Staff</button>
-  <button mat-raised-button color="primary" class="team-btn-lastV">Last Victories</button>
-  <button mat-raised-button color="primary" class="team-btn-topV">Top Victories</button>
+  <button mat-raised-button color="primary" class="team-btn-riders" (click)="openRiders()">Riders & Staff</button>
+  <button mat-raised-button color="primary" class="team-btn-lastV" (click)="openVictories()">Last & Top Victories</button>
   <div class="team-social-icons-container">
     <a href="{{item.Social.website}}"
        [attr.style]="item.Social.website != null ? '' : 'display: none'"
